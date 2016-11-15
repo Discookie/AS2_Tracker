@@ -1,11 +1,11 @@
-AS2 Tracker
+ASh Tracker
 =============
 
-A Windows app project for tracking data from Audiosurf 2.
+A Windows app project for tracking data from Audioshield.
 
 ### Features
 - Collects song, score, and user data for http://as2tracker.com
-- Seamlessly monitors the AS2 process
+- Seamlessly monitors the AS process
 - Grabs latest songs and scores upon game exit
 
 ![Process Monitor](http://f.bay.rocks/1gDJu)
