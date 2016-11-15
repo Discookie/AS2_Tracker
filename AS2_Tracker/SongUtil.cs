@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace AS2_Tracker
+namespace ASh_Tracker
 {
     /*
     TODO:
@@ -28,6 +28,10 @@ namespace AS2_Tracker
 
         static MainForm parent;
         public static DateTime? LastLogWrite; // Stores the last write time of the log
+        static string mapCache;
+        static string modCache;
+        static bool modWas;
+        static bool mapWas;
 
         public static void LoadSongList(MainForm _parent, string[] _files)
         {
@@ -40,7 +44,7 @@ namespace AS2_Tracker
 
             if (ProcessHandler.IsProcessRunning())
             {
-                MessageBox.Show("Error: Cannot load songs while Audiosurf is running.");
+                MessageBox.Show("Error: Cannot load songs while Audioshield is running.");
                 return;
             }
 
@@ -88,7 +92,7 @@ namespace AS2_Tracker
                         continue;
                     }
 
-                    xmlMatch = Regex.Match(line, @"<document><user userid='(.+)' regionid='(.+)' email='(.+)' canpostscores='(.+)'></user><modeid modeid='(.+)'></modeid><modename modename='(.+)'></modename><scoreboards songid='(\d+)' modeid='(\d+)'>");
+                    xmlMatch = Regex.Match(line, @"<document><user userid='(.+)' regionid='(.+)' email='' canpostscores='(.+)'></user><modeid modeid='(.+)'></modeid><modename modename='(.+)'></modename><scoreboards songid='(\d+)' modeid='(\d+)'>");
 
                     if (xmlMatch.Success)
                     {
@@ -112,7 +116,7 @@ namespace AS2_Tracker
                     // We may require invoking so use DoUI
                     parent.DoUI(() =>
                     {
-                        parent.label1.Visible = false;
+                        //parent.label1.Visible = false;
                         parent.songBox.Visible = true;
                     });
                 }
@@ -198,13 +202,13 @@ namespace AS2_Tracker
             Scoreboard.Category boardCategory = scoreBoard.Global; // Set the global entry
             Scoreboard.Entry scoreEntry;
 
-            songInfo.SongID = xmlStart.Groups[7].Value; // Set the song ID
+            songInfo.SongID = xmlStart.Groups[6].Value; // Set the song ID
             songInfo.UserID = xmlStart.Groups[1].Value; // Set the user 
             songInfo.UserRegion = xmlStart.Groups[2].Value; // Set user region
-            songInfo.UserEmail = xmlStart.Groups[3].Value; // Set user email
-            scoreInfo.Mode = xmlStart.Groups[6].Value; // Set song mode
+            songInfo.UserEmail = "doesnt.exist@example.com"; // Shield doesn't output an email address
+            scoreInfo.Mode = xmlStart.Groups[5].Value; // Set song mode
 
-            songInfo.SetCanPost(xmlStart.Groups[4].Value); // Set if cheats were detected
+            songInfo.SetCanPost(xmlStart.Groups[3].Value); // Set if cheats were detected
 
             while (!xmlEnd) // While we aren't done parsing the scoreboard
             {
