@@ -89,7 +89,7 @@ namespace ASh_Tracker
             if (FormWindowState.Minimized == WindowState)
             {
                 Hide();
-                taskNotification("Minimized", "AS2 Tracker was moved to system tray");
+                taskNotification("Minimized", "ASh Tracker was moved to system tray");
             }
         }
 
