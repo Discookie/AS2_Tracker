@@ -1,4 +1,4 @@
-﻿namespace AS2_Tracker
+﻿namespace ASh_Tracker
 {
     partial class OptionsMenu
     {
@@ -59,9 +59,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.Size = new System.Drawing.Size(130, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Path to output_log.txt:";
+            this.label1.Text = "Path to Audioshield folder:";
             // 
             // label2
             // 

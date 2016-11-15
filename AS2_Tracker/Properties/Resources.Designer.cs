@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AS2_Tracker.Properties {
+namespace ASh_Tracker.Properties {
     using System;
     
     

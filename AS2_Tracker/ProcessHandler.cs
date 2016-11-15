@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace AS2_Tracker
+namespace ASh_Tracker
 {
     /*
     TODO:
@@ -22,7 +22,7 @@ namespace AS2_Tracker
         {
             if (processRunning) return; // Don't continue if we already raised the event
 
-            audiosurf = Process.GetProcessesByName("Audiosurf2");
+            audiosurf = Process.GetProcessesByName("Audioshield");
             if (audiosurf.Length == 0) return; // Don't continue if it's not running
 
             foreach (Process process in audiosurf)
@@ -58,9 +58,9 @@ namespace AS2_Tracker
         {
             string running;
             if (processRunning)
-                running = "Audiosurf is running.";
+                running = "Audioshield is running!";
             else
-                running = "Audiosurf is not running.";
+                running = "Audioshield is not running.";
 
             return running;
         }

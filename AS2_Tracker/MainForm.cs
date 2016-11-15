@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace AS2_Tracker
+namespace ASh_Tracker
 {
     /*
     TODO: Add minimize button

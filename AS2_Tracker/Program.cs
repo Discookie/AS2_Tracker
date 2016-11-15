@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-namespace AS2_Tracker
+namespace ASh_Tracker
 {
     static class Program
     {
@@ -29,7 +29,7 @@ namespace AS2_Tracker
             if (Properties.Settings.Default.startRegistryExists != true
                 && Properties.Settings.Default.shouldRunOnStartup == true)
             {
-                registry.SetValue("AS2_Tracker", Application.ExecutablePath.ToString());
+                registry.SetValue("ASh_Tracker", Application.ExecutablePath.ToString());
                 Properties.Settings.Default.startRegistryExists = true;
                 Properties.Settings.Default.Save();
             }
@@ -37,7 +37,7 @@ namespace AS2_Tracker
             {
                 if (registry != null && Properties.Settings.Default.shouldRunOnStartup != true)
                 {
-                    registry.DeleteValue("AS2_Tracker", false);
+                    registry.DeleteValue("ASh_Tracker", false);
                 }
             }
         }

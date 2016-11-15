@@ -2,7 +2,7 @@
 using System.Deployment.Application;
 using System.Windows.Forms;
 
-namespace AS2_Tracker
+namespace ASh_Tracker
 {
     public static class UpdateHandler
     {
@@ -63,7 +63,7 @@ namespace AS2_Tracker
                         try
                         {
                             ad.Update();
-                            parent.taskNotification("Update", "AS2 Tracker has been updated, and will now restart.");
+                            parent.taskNotification("Update", "ASh Tracker has been updated, and will now restart.");
                             Application.Restart();
                         }
                         catch (DeploymentDownloadException dde)

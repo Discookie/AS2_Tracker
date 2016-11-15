@@ -1,4 +1,4 @@
-﻿namespace AS2_Tracker
+﻿namespace ASh_Tracker
 {
     partial class MainForm
     {
@@ -44,9 +44,9 @@
             // songBox
             // 
             this.songBox.FormattingEnabled = true;
-            this.songBox.Location = new System.Drawing.Point(12, 28);
+            this.songBox.Location = new System.Drawing.Point(12, 60);
             this.songBox.Name = "songBox";
-            this.songBox.Size = new System.Drawing.Size(260, 238);
+            this.songBox.Size = new System.Drawing.Size(260, 199);
             this.songBox.TabIndex = 0;
             this.songBox.Visible = false;
             this.songBox.DoubleClick += new System.EventHandler(this.songBox_DoubleClick_1);
@@ -54,9 +54,9 @@
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.Location = new System.Drawing.Point(-3, 24);
+            this.label1.Location = new System.Drawing.Point(0, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 257);
+            this.label1.Size = new System.Drawing.Size(284, 33);
             this.label1.TabIndex = 1;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
