@@ -309,7 +309,7 @@ namespace ASh_Tracker
                     Stream responseStream = response.GetResponseStream();
                     string responseStr = new StreamReader(responseStream, Encoding.UTF8).ReadToEnd();
 
-                    parent.taskNotification("Success!", String.Format("Posted {0:n0} songs to AS2Tracker.com", Song.Count));
+                    parent.taskNotification("Success!", String.Format("Posted {0:n0} songs to Audioshield.AS2Tracker.com", Song.Count));
                     //Console.WriteLine(responseStr);
                 }
             }

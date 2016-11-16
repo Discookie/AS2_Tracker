@@ -62,7 +62,7 @@ namespace ASh_Tracker
             if (songBox.SelectedItem == null) return;
 
             Song songInfo = (Song)songBox.SelectedItem;
-            string songURL = "http://www.as2tracker.com/song.php?id=" + songInfo.SongID;
+            string songURL = "http://audioshield.as2tracker.com/song/" + songInfo.SongID;
 
             System.Diagnostics.Process.Start(songURL);
 
