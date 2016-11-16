@@ -61,7 +61,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Path to Audioshield folder:";
+            this.label1.Text = "Path to Audioshield output_log.txt:";
             // 
             // label2
             // 
