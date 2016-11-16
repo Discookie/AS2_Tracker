@@ -28,10 +28,6 @@ namespace ASh_Tracker
 
         static MainForm parent;
         public static DateTime? LastLogWrite; // Stores the last write time of the log
-        static string mapCache;
-        static string modCache;
-        static bool modWas;
-        static bool mapWas;
 
         public static void LoadSongList(MainForm _parent, string[] _files)
         {
