@@ -1,6 +1,10 @@
 ASh Tracker
 =============
 
+### This project is discontinued, stay tuned for alternatives!
+
+-------
+
 A Windows app project for tracking data from Audioshield.
 
 ### Features
